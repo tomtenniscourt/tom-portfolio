@@ -22,3 +22,40 @@
   text-decoration: underline;
   /* Add an underline to the link */
 }
+
+.home-content {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 25%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.home-h1 {
+  font-size: 85px;
+}
+
+.home-p {
+  font-size: 30px;
+}
+
+.about-section {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px
+}
+
+.about-me-h1 {
+  font-size: 30px;
+}
+
+.about-me-p {
+  font-size: 10px;;
+}
