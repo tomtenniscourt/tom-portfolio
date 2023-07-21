@@ -5,6 +5,8 @@ import { Link } from "react-scroll";
 import "./App.css";
 
 function App() {
+  const navBarHeight = 60; // Update this with the actual height of your nav bar
+
   const navLinkStyle = {
     color: "#ffffff",
     fontSize: "1rem", // Adjust the font size as needed
@@ -15,7 +17,11 @@ function App() {
   };
 
   const sectionStyle = {
-    height: "750px", // Make each section 50% taller (original height: 500px)
+    height: "1000px",
+  };
+
+  const contentStyle = {
+    paddingTop: navBarHeight + "px", // Add padding to the top of the content
   };
 
   return (
@@ -25,26 +31,24 @@ function App() {
           href="#home"
           style={{ color: "#ffffff", fontSize: "1.5rem", fontWeight: "bold" }}
         >
-          My Portfolio
+          Tom's Portfolio
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            {" "}
-            {/* Utilize ml-auto to align links to the right */}
             <Link
               activeClass="active"
               to="section1"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-navBarHeight} // Adjust the offset to account for the nav bar height
               duration={500}
               style={navLinkStyle}
-              activeStyle={{ textDecoration: "underline" }} // Add underline when link is active
+              activeStyle={{ textDecoration: "underline" }}
               onMouseEnter={(e) =>
                 (e.target.style.transform = "translateY(-2px)")
-              } // Apply hover effect
-              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")} // Reset transform on hover exit
+              }
+              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
               Section 1
             </Link>
@@ -53,7 +57,7 @@ function App() {
               to="section2"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-navBarHeight}
               duration={500}
               style={navLinkStyle}
               activeStyle={{ textDecoration: "underline" }}
@@ -62,14 +66,14 @@ function App() {
               }
               onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Section 2
+              About Me
             </Link>
             <Link
               activeClass="active"
               to="section3"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-navBarHeight}
               duration={500}
               style={navLinkStyle}
               activeStyle={{ textDecoration: "underline" }}
@@ -78,14 +82,14 @@ function App() {
               }
               onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Section 3
+              Projects
             </Link>
             <Link
               activeClass="active"
               to="section4"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-navBarHeight}
               duration={500}
               style={navLinkStyle}
               activeStyle={{ textDecoration: "underline" }}
@@ -94,14 +98,14 @@ function App() {
               }
               onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Section 4
+              Contact
             </Link>
             <Link
               activeClass="active"
               to="section5"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-navBarHeight}
               duration={500}
               style={navLinkStyle}
               activeStyle={{ textDecoration: "underline" }}
@@ -116,39 +120,38 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-      <div
-        id="section1"
-        style={{ ...sectionStyle, backgroundColor: "#f0f0f0" }}
-      >
-        Section 1
-      </div>
-
-      <div
-        id="section2"
-        style={{ ...sectionStyle, backgroundColor: "#e0e0e0" }}
-      >
-        Section 2
-      </div>
-
-      <div
-        id="section3"
-        style={{ ...sectionStyle, backgroundColor: "#d0d0d0" }}
-      >
-        Section 3
-      </div>
-
-      <div
-        id="section4"
-        style={{ ...sectionStyle, backgroundColor: "#c0c0c0" }}
-      >
-        Section 4
-      </div>
-
-      <div
-        id="section5"
-        style={{ ...sectionStyle, backgroundColor: "#b0b0b0" }}
-      >
-        Section 5
+      <div style={contentStyle}>
+        <div
+          id="home"
+          style={{ ...sectionStyle, backgroundColor: "#f0f0f0" }}
+        >
+          <br />
+          <h1>Tom Court: Software Engineer</h1>
+        </div>
+        <div
+          id="about"
+          style={{ ...sectionStyle, backgroundColor: "#e0e0e0" }}
+        >
+          Section 2 (Height: 1000px)
+        </div>
+        <div
+          id="projects"
+          style={{ ...sectionStyle, backgroundColor: "#d0d0d0" }}
+        >
+          Section 3 (Height: 600px)
+        </div>
+        <div
+          id="contact"
+          style={{ ...sectionStyle, backgroundColor: "#c0c0c0" }}
+        >
+          Section 4 (Height: 1200px)
+        </div>
+        <div
+          id="section5"
+          style={{ ...sectionStyle, backgroundColor: "#b0b0b0" }}
+        >
+          Section 5 (Height: 900px)
+        </div>
       </div>
     </div>
   );
