@@ -1,32 +1,23 @@
-/* App.css */
-
-/* Style the text color of the Navbar links */
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   transition: all 0.2s ease;
-  /* Add a smooth transition on all properties */
 }
 
-/* Apply the hover animation when the link is hovered */
 .navbar-dark .navbar-nav .nav-link:hover {
   transform: translateY(-2px);
-  /* Move the link 2 pixels up */
 }
 
-/* Apply the active state style when the link is clicked */
 .navbar-dark .navbar-nav .nav-link.active {
   color: #ffffff;
-  /* You can adjust the color as per your preference */
   text-decoration: underline;
-  /* Add an underline to the link */
 }
 
 .home-content {
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 25%;
+  margin-top: 15%;
   text-align: center;
   border: 1px solid black;
   border-radius: 10px;
@@ -40,7 +31,7 @@
   font-size: 30px;
 }
 
-.about-section {
+.about-section-title {
   position: absolute;
   top: 10px;
   left: 50%;
@@ -49,13 +40,115 @@
   border: 0.5px solid black;
   border-radius: 5px;
   background-color: #ffffff;
-  padding: 10px
+  padding: 10px;
 }
 
+.about-section-subtitle {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.skills-part,
+.about-part {
+  flex: 1;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.about-part {
+  flex: 1;
+  padding: 10px;
+  margin-left: 50px;
+}
 .about-me-h1 {
   font-size: 30px;
 }
 
+.about-me-h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
 .about-me-p {
-  font-size: 10px;;
+  font-size: 10px;
+}
+
+.about-me-subtitle-p {
+  font-size: 5px;
+    text-align: justify;
+}
+
+@media (max-width: 910px) {
+
+  /* Apply styles for smaller screens */
+  .about-section-subtitle {
+    flex-direction: column;
+    top: 120px;
+    /* Adjust the positioning as needed */
+  }
+
+  .about-part {
+    margin-top: 20px;
+    /* Add spacing between the two divs */
+    margin-left: 10px;
+    /* Adjust the left margin */
+    margin-right: 10px;
+    /* Adjust the right margin */
+  }
+
+  .skills-part {
+    margin-left: 10px;
+    /* Adjust the left margin */
+    margin-right: 10px;
+    /* Adjust the right margin */
+  }
+}
+
+
+.button-container-about {
+text-align: center;
+margin-bottom: -10px;
+margin-top: 5px;
+}
+
+.contact-me-button {
+font-size: 5px;
+border: 1px solid black;
+border-radius: 2px;
+transition: transform 0.3s ease;
+margin-top: 5px;
+}
+
+.contact-me-button:hover {
+transform: translateY(-1px);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  /* Adjust the gap as needed */
+  margin-top: 20px;
+  /* Add spacing between the title and the skills list */
+}
+
+.skill-box {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 10px;
 }

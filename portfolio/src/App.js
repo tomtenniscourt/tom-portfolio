@@ -2,57 +2,20 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
 import "./App.css";
+import About from "./About"; 
 
-const ScalingDiv = ({ children, className }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.querySelector(className);
-      if (element) {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        setIsVisible(elementTop < windowHeight);
-      }
-    };
-
-    const handleScale = () => {
-      if (isVisible) {
-        controls.start({ scale: 3 });
-      } else {
-        controls.start({ scale: 1 });
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScale();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls, className, isVisible]);
-
-  return (
-    <motion.div animate={controls} transition={{ duration: 0.3, delay: 0.5 }}>
-      {children}
-    </motion.div>
-  );
-};
 
 function App() {
-  const navBarHeight = 60; // Update this with the actual height of your nav bar
+  const navBarHeight = 60; 
 
   const navLinkStyle = {
     color: "#ffffff",
-    fontSize: "1rem", // Adjust the font size as needed
-    fontWeight: "bold", // Make the links bold (optional)
-    transition: "transform 0.2s ease", // Add a smooth transition on the transform property
-    marginLeft: "20px", // Add left margin for spacing between links
-    cursor: "pointer", // Change the cursor to pointer on hover
+    fontSize: "1rem", 
+    fontWeight: "bold", 
+    transition: "transform 0.2s ease", 
+    marginLeft: "20px", 
+    cursor: "pointer", 
   };
 
   const sectionStyle = {
@@ -60,7 +23,7 @@ function App() {
   };
 
   const contentStyle = {
-    paddingTop: navBarHeight + "px", // Add padding to the top of the content
+    paddingTop: navBarHeight + "px", 
   };
 
   return (
@@ -70,7 +33,7 @@ function App() {
           href="#home"
           style={{ color: "#ffffff", fontSize: "1.5rem", fontWeight: "bold" }}
         >
-          Tom's Portfolio
+          Tom Court
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -80,7 +43,7 @@ function App() {
               to="section1"
               spy={true}
               smooth={true}
-              offset={-navBarHeight} // Adjust the offset to account for the nav bar height
+              offset={-navBarHeight} 
               duration={500}
               style={navLinkStyle}
               activeStyle={{ textDecoration: "underline" }}
@@ -89,7 +52,7 @@ function App() {
               }
               onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Section 1
+              Home
             </Link>
             <Link
               activeClass="active"
@@ -166,10 +129,10 @@ function App() {
         >
           <br />
           <div className="home-content">
-          <h1 className="home-h1">Tom Court: Software Engineer</h1>
-          <p className="home-p">Test text goes here</p>
+            <h1 className="home-h1">Tom Court: Software Engineer</h1>
+            <p className="home-p">Test text goes here</p>
           </div>
-          </div>
+        </div>
 
         <div
           id="section2"
@@ -179,12 +142,7 @@ function App() {
             position: "relative",
           }}
         >
-          <ScalingDiv className=".about-section">
-            <div className="about-section">
-              <h1 className="about-me-h1">ABOUT ME</h1>
-              <p className="about-me-p">Test text for when I can think of something better </p>
-              </div>
-          </ScalingDiv>
+          <About />
         </div>
 
         <div
