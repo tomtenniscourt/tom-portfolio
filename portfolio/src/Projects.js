@@ -69,8 +69,34 @@ const Projects = () => {
               className={`item ${expandedItem === index ? "expanded" : ""}`}
               variants={item}
               onClick={() => handleItemClick(index)}
-              whileHover={{ scale: 1.2 }} 
-            />
+              whileHover={{ scale: 1.2 }}
+            >
+              {/* Individual Content for each item */}
+              {index === 0 && (
+                <div className="content-item-one">
+                  <h2 className="item-h2">Tic Tac Toe</h2>
+                  <p className="item-p">Some text for item 1</p>
+                </div>
+              )}
+              {index === 1 && (
+                <div className="content-item-two">
+                  <h2 className="item-h2">Dad Jokes</h2>
+                  <p className="item-p">Some text for item 1</p>
+                </div>
+              )}
+              {index === 2 && (
+                <div className="content-item-three">
+                  <h2 className="item-h2">Weather App</h2>
+                  <p className="item-p">Some text for item 1</p>
+                </div>
+              )}
+              {index === 3 && (
+                <div className="content-item-four">
+                  <h2 className="item-h2">Paint</h2>
+                  <p className="item-p">Some text for item 1</p>
+                </div>
+              )}
+            </motion.li>
           ))}
         </motion.ul>
       )}

@@ -17,9 +17,23 @@
     background: white;
     border-radius: 15%;
 }
+
 #projects-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.content-item-one, .content-item-two, .content-item-three, .content-item-four {
+    text-align: center;
+}
+
+.item-h2 {
+    font-size: 7px;
+    padding-top: 10px;
+}
+
+.item-p {
+    font-size: 2px;
 }
