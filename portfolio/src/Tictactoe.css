@@ -1,0 +1,55 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 75px);
+    grid-template-rows: repeat(3, 75px);
+    grid-gap: 5px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: #f3f3f3;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.cell:hover {
+    background: #e3e3e3;
+}
+
+.cell.⭕️::after {
+    background: linear-gradient(90deg, #b8e986, #64c964);
+}
+
+.cell.❌::after {
+    background: linear-gradient(90deg, #88d8e7, #3eaee6);
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.reset-button:hover {
+    background-color: #ff6060;
+    transform: scale(1.05);
+}

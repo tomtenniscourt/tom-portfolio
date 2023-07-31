@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
   font-size: 1rem;
@@ -19,16 +21,31 @@
   margin-right: 20%;
   margin-top: 15%;
   text-align: center;
-  border: 1px solid black;
   border-radius: 10px;
 }
 
 .home-h1 {
   font-size: 85px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
 }
 
 .home-p {
   font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+}
+
+#section2 {
+  background-image: url('https://i.imgur.com/gMbao5C.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-me-h1 {
+font-family: 'Roboto', sans-serif;
+  font-weight: 900;
 }
 
 .about-section-title {
@@ -41,6 +58,7 @@
   border-radius: 5px;
   background-color: #ffffff;
   padding: 10px;
+  
 }
 
 .about-section-subtitle {
@@ -53,6 +71,8 @@
   border-radius: 5px;
   padding: 10px;
   border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .skills-part,
@@ -87,36 +107,9 @@
 }
 
 .about-me-subtitle-p {
-  font-size: 5px;
+  font-size: 7px;
     text-align: justify;
 }
-
-@media (max-width: 910px) {
-
-  /* Apply styles for smaller screens */
-  .about-section-subtitle {
-    flex-direction: column;
-    top: 120px;
-    /* Adjust the positioning as needed */
-  }
-
-  .about-part {
-    margin-top: 20px;
-    /* Add spacing between the two divs */
-    margin-left: 10px;
-    /* Adjust the left margin */
-    margin-right: 10px;
-    /* Adjust the right margin */
-  }
-
-  .skills-part {
-    margin-left: 10px;
-    /* Adjust the left margin */
-    margin-right: 10px;
-    /* Adjust the right margin */
-  }
-}
-
 
 .button-container-about {
 text-align: center;
@@ -126,7 +119,7 @@ margin-top: 5px;
 
 .contact-me-button {
 font-size: 5px;
-border: 1px solid black;
+border: 0.5px solid black;
 border-radius: 2px;
 transition: transform 0.3s ease;
 margin-top: 5px;
@@ -141,14 +134,35 @@ transform: translateY(-1px);
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  /* Adjust the gap as needed */
-  margin-top: 20px;
-  /* Add spacing between the title and the skills list */
+  margin-top: 10px;
 }
 
 .skill-box {
   padding: 8px 16px;
   background-color: #f0f0f0;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 7px;
+}
+
+
+
+
+
+@media (max-width: 910px) {
+
+  .about-section-subtitle {
+    flex-direction: column;
+    top: 120px;
+  }
+
+  .about-part {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .skills-part {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

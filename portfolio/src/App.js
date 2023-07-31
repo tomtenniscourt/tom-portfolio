@@ -4,6 +4,8 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "./App.css";
 import About from "./About"; 
+import Projects from "./Projects"; 
+
 
 
 function App() {
@@ -43,7 +45,7 @@ function App() {
               to="section1"
               spy={true}
               smooth={true}
-              offset={-navBarHeight} 
+              offset={-navBarHeight}
               duration={500}
               style={navLinkStyle}
               activeStyle={{ textDecoration: "underline" }}
@@ -125,7 +127,13 @@ function App() {
       <div style={contentStyle}>
         <div
           id="section1"
-          style={{ ...sectionStyle, backgroundColor: "#f0f0f0" }}
+          style={{
+            ...sectionStyle,
+            backgroundImage: 'url("https://i.imgur.com/09mIBEt.jpeg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundColor: "#f0f0f0",
+          }}
         >
           <br />
           <div className="home-content">
@@ -149,7 +157,7 @@ function App() {
           id="section3"
           style={{ ...sectionStyle, backgroundColor: "#d0d0d0" }}
         >
-          Section 3 (Height: 600px)
+          <Projects />{" "}
         </div>
 
         <div

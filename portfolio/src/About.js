@@ -48,7 +48,7 @@ const ScalingDiv = ({ children }) => {
   }, [controls, isVisible]);
 
   return (
-    <motion.div animate={controls} transition={{ duration: 0.3, delay: 0.5 }}>
+    <motion.div animate={controls} transition={{ duration: 0.3, delay: 0.3 }}>
       {children}
     </motion.div>
   );
@@ -81,20 +81,20 @@ const About = () => {
           <div className="about-part">
             <h2 className="about-me-h2">Who am I?</h2>
             <p className="about-me-subtitle-p">
-              I have just finished a three month intensive course that taught
+              I have just finished a three month intensive Software Engineering course that taught
               the fundamentals of HTML5, CSS, and JavaScript, in order to
               prepare myself for a career in Software Engineering and
               Development. A collection of some applications I have built can be
-              seen in the projects section.
+              seen below in the projects section.
               <br />
               <br />
-              "I am actively seeking job opportunities where I can make
+              I am actively seeking job opportunities where I can make
               meaningful contributions, continuously learn, and grow as a
               professional. With a solid foundation as a trained full stack
               engineer, I find the most fulfillment and joy working on the front
-              end of projects. If you have an exciting opportunity that aligns
+              end of projects. If you have or hear of any exciting opportunities that aligns
               with my skills and experience, I would be thrilled to hear from
-              you!"
+              you! Please feel free to connect with me on LinkedIn, or contact me using the link below.
               <br />
               <div className="button-container-about">
                 <Link
