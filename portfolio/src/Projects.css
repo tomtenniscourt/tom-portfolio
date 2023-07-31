@@ -1,3 +1,5 @@
+
+
 .container {
     width: 150px;
     height: 150px;
@@ -36,4 +38,11 @@
 
 .item-p {
     font-size: 2px;
+    margin: 4px;
+    text-align: justify;
 }
+.button-tictactoe-go, .button-joke-go, .button-weather-go, .button-paint-go {
+    height: 10px;
+    font-size: 5px;
+    border: 0.5px;
+    }
