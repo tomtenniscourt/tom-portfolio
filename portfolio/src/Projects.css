@@ -17,12 +17,9 @@
     background: white;
     border-radius: 15%;
 }
-
-/* New styles to center the projects section */
 #projects-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Set the height to 100% of the viewport height */
 }

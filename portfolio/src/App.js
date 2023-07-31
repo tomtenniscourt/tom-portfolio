@@ -3,21 +3,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "./App.css";
-import About from "./About"; 
-import Projects from "./Projects"; 
-
-
+import About from "./About";
+import Projects from "./Projects";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
-  const navBarHeight = 60; 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  const navBarHeight = 60;
 
   const navLinkStyle = {
     color: "#ffffff",
-    fontSize: "1rem", 
-    fontWeight: "bold", 
-    transition: "transform 0.2s ease", 
-    marginLeft: "20px", 
-    cursor: "pointer", 
+    fontSize: "1rem",
+    fontWeight: "bold",
+    transition: "transform 0.2s ease",
+    marginLeft: "20px",
+    cursor: "pointer",
   };
 
   const sectionStyle = {
@@ -25,7 +31,7 @@ function App() {
   };
 
   const contentStyle = {
-    paddingTop: navBarHeight + "px", 
+    paddingTop: navBarHeight + "px",
   };
 
   return (
@@ -123,6 +129,7 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <motion.div className="progress-bar" style={{ scaleX }} />
 
       <div style={contentStyle}>
         <div
