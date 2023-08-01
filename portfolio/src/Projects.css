@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+.project-h1-div {
+    padding-top: 40px;
+}
+
+.h1-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 85px;
+}
 
 .container {
     width: 150px;
@@ -24,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 72vh;
 }
 
 .content-item-one, .content-item-two, .content-item-three, .content-item-four {
