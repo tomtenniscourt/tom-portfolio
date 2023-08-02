@@ -12,17 +12,34 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission - replace this with actual form submission to your server
-sendEmail(formData, "http://localhost:3333/api/contact");
-    // Clear form fields after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("http://localhost:3333/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
-  };
+
+    if (response.ok) {
+      console.log("Email sent successfully");
+    } else {
+      console.log("Failed to send the email");
+    }
+  } catch (error) {
+    console.log("Error sending the email:", error);
+  }
+
+  // Clear form fields after submission
+  setFormData({
+    name: "",
+    email: "",
+    message: "",
+  });
+};
+
 
   const sendEmail = (data) => {
     // Simulate sending an email with the form data
