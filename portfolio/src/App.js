@@ -5,6 +5,8 @@ import { Link } from "react-scroll";
 import "./App.css";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import ContactForm from "./ContactForm";
+
 import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
@@ -158,7 +160,7 @@ function App() {
           style={{ ...sectionStyle, backgroundColor: "#b0b0b0" }}
         >
           {/* Section 5 content */}
-          Section 5 (Height: 900px)
+          <ContactForm />
         </div>
       </div>
     </div>
