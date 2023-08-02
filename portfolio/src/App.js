@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "./App.css";
-import About from "./About";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -65,22 +64,6 @@ function App() {
             </Link>
             <Link
               activeClass="active"
-              to="section2"
-              spy={true}
-              smooth={true}
-              offset={-navBarHeight}
-              duration={500}
-              style={navLinkStyle}
-              activeStyle={{ textDecoration: "underline" }}
-              onMouseEnter={(e) =>
-                (e.target.style.transform = "translateY(-2px)")
-              }
-              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
-            >
-              About Me
-            </Link>
-            <Link
-              activeClass="active"
               to="section3"
               spy={true}
               smooth={true}
@@ -109,7 +92,7 @@ function App() {
               }
               onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Contact
+              About
             </Link>
             <Link
               activeClass="active"
@@ -125,7 +108,7 @@ function App() {
               }
               onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Section 5
+              Contact
             </Link>
           </Nav>
         </Navbar.Collapse>
@@ -151,27 +134,22 @@ function App() {
         </div>
 
         <div
-          id="section2"
-          style={{
-            ...sectionStyle,
-            backgroundColor: "#e0e0e0",
-            position: "relative",
-          }}
-        >
-          <About />
-        </div>
-
-        <div
           id="section3"
           style={{ ...sectionStyle, backgroundColor: "#d0d0d0" }}
         >
-          <Projects />{" "}
+          {/* Section 3 content (Projects) */}
+          <Projects />
         </div>
 
         <div
           id="section4"
-          style={{ ...sectionStyle, backgroundColor: "#c0c0c0" }}
+          style={{
+            ...sectionStyle,
+            backgroundColor: "#c0c0c0",
+            position: "relative",
+          }}
         >
+          {/* Section 4 content (Skills) */}
           <Skills />
         </div>
 
@@ -179,6 +157,7 @@ function App() {
           id="section5"
           style={{ ...sectionStyle, backgroundColor: "#b0b0b0" }}
         >
+          {/* Section 5 content */}
           Section 5 (Height: 900px)
         </div>
       </div>

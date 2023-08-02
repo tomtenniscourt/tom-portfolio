@@ -74,7 +74,6 @@ const Projects = () => {
                 onClick={() => handleItemClick(index)}
                 whileHover={{ scale: 1.2 }}
               >
-                {/* Individual Content for each item */}
                 {index === 0 && (
                   <div className="content-item-one">
                     <h2 className="item-h2">Tic Tac Toe</h2>
