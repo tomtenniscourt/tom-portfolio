@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import "./App.css";
 import About from "./About";
 import Projects from "./Projects";
+import Skills from "./Skills";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
@@ -171,7 +172,7 @@ function App() {
           id="section4"
           style={{ ...sectionStyle, backgroundColor: "#c0c0c0" }}
         >
-          Section 4 (Height: 1200px)
+          <Skills />
         </div>
 
         <div

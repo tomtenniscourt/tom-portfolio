@@ -1,0 +1,38 @@
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 72vh;
+}
+
+.container-skills {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    /* Center horizontally and vertically */
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    position: relative;
+    /* Add this line */
+}
+
+.item-skills {
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    /* Center the item-skills within container-skills */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.skill-h1-div {
+    margin-bottom: 20px;
+    /* Add a margin at the bottom of the H1 for spacing */
+}
