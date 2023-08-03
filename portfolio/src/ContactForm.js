@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "./ContactForm.css"
+import "./ContactForm.css";
 
 const container = {
-  hidden: { opacity: 1, scale: 0 },
+  hidden: { opacity: 0, scale: 0 },
   visible: {
     opacity: 1,
-    scale: 1,
+    scale: 3,
     transition: {
       delayChildren: 0.3,
       staggerChildren: 0.2,
@@ -36,6 +36,7 @@ const ContactForm = () => {
         setIsSectionVisible(visiblePercentage >= 0.55);
       }
     };
+const emailSubject = "Inquiry from Website";
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -46,27 +47,63 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <div className="contact-form-content">
+    <>
       <div className="contact-h1-div">
-        <h1 className="h1-content">CONTACT</h1>
+        <h1 className="contact-h1-content">CONTACT</h1>
       </div>
-      <div id="contact-form-section">
-        <div className="container">
-          {isSectionVisible && (
-            <motion.div
-              className="item"
-              variants={item}
-              whileHover={{ scale: 1.2 }}
-            >
-              <h2 className="item-title">Title Here</h2>
-              <p className="item-text">
-                Some text describing the item goes here.
-              </p>
-            </motion.div>
-          )}
-        </div>
+      <div className="contact-form-section">
+        <motion.div
+          className="contact-container"
+          variants={container}
+          initial="hidden"
+          animate={isSectionVisible ? "visible" : "hidden"}
+        >
+          <motion.div
+            className="contact-item"
+            variants={item}
+            whileHover={{ scale: 1.2 }}
+          >
+            <h2 className="contact-item-title">Get in touch!</h2>
+            <p className="contact-item-text">
+              Tom Court
+              <br />
+              London
+              <br />
+              EC1V.
+              <br />
+              <a href="https://www.instagram.com/tomtenniscourt/">
+                <img
+                  className="sm-profile"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
+                  alt="Link to Instagram"
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/tom-court/">
+                <img
+                  className="sm-profile"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
+                  alt="Link to LinkedIn"
+                />
+              </a>
+              <a href="https://github.com/tomtenniscourt">
+                <img
+                  className="sm-profile"
+                  src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
+                  alt="Link to GitHub"
+                />
+              </a>
+              <a href="mailto:tomcourt94@icloud.com?subject=Hello%20Tom">
+                <img
+                  className="email-profile"
+                  src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Mail-512.png"
+                  alt="Email Tom"
+                />
+              </a>
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </>
   );
 };
 
