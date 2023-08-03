@@ -137,7 +137,7 @@ const ContactForm = () => {
                   src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Mail-512.png"
                   alt="Email Tom"
                   initial={{ scale: 0 }}
-                  animate={{ rotate: 0, scale: 1 }}
+                  animate={{ rotate: 360, scale: 1 }}
                   transition={{
                     type: "spring",
                     stiffness: 260,

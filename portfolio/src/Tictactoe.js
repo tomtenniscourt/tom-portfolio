@@ -19,13 +19,11 @@ const Tictactoe = ({ showTicTacToe, onHideTicTacToe }) => {
   const [slideIn, setSlideIn] = useState(false);
 
   useEffect(() => {
-    // When showTicTacToe prop changes, trigger the slide animation
     setSlideIn(showTicTacToe);
   }, [showTicTacToe]);
 
   const handleCellClick = (index) => {
     if (board[index] || winner) {
-      // Ignore click if the cell is already occupied or a winner is declared
       return;
     }
 
@@ -61,10 +59,10 @@ const Tictactoe = ({ showTicTacToe, onHideTicTacToe }) => {
   };
 
   const handleHideTicTacToe = () => {
-    setWinner(null); // Reset winner state when hiding the component
-    setBoard(Array(9).fill(null)); // Reset the board when hiding the component
-    setCurrentPlayer("⭕️"); // Reset current player when hiding the component
-    onHideTicTacToe(); // Call the function from the parent component to hide Tic Tac Toe
+    setWinner(null); 
+    setBoard(Array(9).fill(null)); 
+    setCurrentPlayer("⭕️"); 
+    onHideTicTacToe(); 
   };
 
   return (
