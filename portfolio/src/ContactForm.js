@@ -36,7 +36,6 @@ const ContactForm = () => {
         setIsSectionVisible(visiblePercentage >= 0.55);
       }
     };
-const emailSubject = "Inquiry from Website";
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -45,6 +44,8 @@ const emailSubject = "Inquiry from Website";
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const emailSubject = "Inquiry from Website";
 
   return (
     <>
@@ -71,34 +72,80 @@ const emailSubject = "Inquiry from Website";
               <br />
               EC1V.
               <br />
-              <a href="https://www.instagram.com/tomtenniscourt/">
-                <img
+              <motion.a
+                href="https://www.instagram.com/tomtenniscourt/"
+                variants={item}
+              >
+                <motion.img
                   className="sm-profile"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
                   alt="Link to Instagram"
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 360, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: 0.3,
+                  }}
                 />
-              </a>
-              <a href="https://www.linkedin.com/in/tom-court/">
-                <img
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/tom-court/"
+                variants={item}
+              >
+                <motion.img
                   className="sm-profile"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
                   alt="Link to LinkedIn"
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 360, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: 0.5,
+                  }}
                 />
-              </a>
-              <a href="https://github.com/tomtenniscourt">
-                <img
+              </motion.a>
+              <motion.a
+                href="https://github.com/tomtenniscourt"
+                variants={item}
+              >
+                <motion.img
                   className="sm-profile"
                   src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"
                   alt="Link to GitHub"
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 360, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: 0.7,
+                  }}
                 />
-              </a>
-              <a href="mailto:tomcourt94@icloud.com?subject=Hello%20Tom">
-                <img
+              </motion.a>
+              <motion.a
+                href={`mailto:tomcourt94@icloud.com?subject=${encodeURIComponent(
+                  emailSubject
+                )}`}
+                variants={item}
+              >
+                <motion.img
                   className="email-profile"
                   src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Mail-512.png"
                   alt="Email Tom"
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 0, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: 0.9,
+                  }}
                 />
-              </a>
+              </motion.a>
             </p>
           </motion.div>
         </motion.div>
