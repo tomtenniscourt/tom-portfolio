@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Skills.css";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // Import Link from react-scroll
+
 
 const skills = [
   "HTML5",
@@ -96,7 +98,7 @@ const Skills = () => {
               >
                 <div className="skill-content-item">
                   <h2 className="item-h2">Who Am I?</h2>
-                  <p className="item-p">
+                  <p className="skills-item-p">
                     I have just finished a three month intensive Software
                     Engineering course that taught the fundamentals of HTML5,
                     CSS, and JavaScript, in order to prepare myself for a career
@@ -105,15 +107,20 @@ const Skills = () => {
                     projects section.
                     <br />
                     <br />
-                    I am actively seeking job opportunities where I can
-                    make meaningful contributions, continuously learn, and grow
-                    as a professional. With a solid foundation as a trained full
+                    I am actively seeking job opportunities where I can make
+                    meaningful contributions, continuously learn, and grow as a
+                    professional. With a solid foundation as a trained full
                     stack engineer, I find the most fulfillment and joy working
-                    on the front end of projects. If you have or hear of any
-                    exciting opportunities that aligns with my skills and
-                    experience, I would be thrilled to hear from you! Please
-                    feel free to connect with me on LinkedIn, or contact me
-                    using the link below.
+                    on the front end of projects.
+                    <br />
+                    <br />
+                    If you have or hear of any exciting opportunities that
+                    aligns with my skills and experience, I would be thrilled to
+                    hear from you! Please feel free to connect with me on{" "}
+                    <a href="https://www.linkedin.com/in/tom-court/">
+                      LinkedIn
+                    </a>
+                    , or contact me using the links below.
                   </p>
                 </div>
               </motion.li>

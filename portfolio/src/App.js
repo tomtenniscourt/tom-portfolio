@@ -2,10 +2,12 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
+import { BrowserRouter as Router, Route } from "react-router-dom"; 
 import "./App.css";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import ContactForm from "./ContactForm";
+import Joke from "./Joke";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -23,27 +25,41 @@ function App() {
     color: "#ffffff",
     fontSize: "1rem",
     fontWeight: "bold",
-    transition: "transform 0.2s ease",
     marginLeft: "20px",
     cursor: "pointer",
   };
 
+  const underlineStyle = {
+    position: "absolute",
+    bottom: "0",
+    left: "0",
+    width: "100%",
+    height: "2px",
+    backgroundColor: "#ffffff",
+    transformOrigin: "bottom right",
+  };
+
   const sectionStyle = {
     height: "1000px",
+    marginBottom: "25px", 
   };
 
   const contentStyle = {
     paddingTop: navBarHeight + "px",
   };
 
+  const logoImage = "https://i.imgur.com/NF2gNgt.png";
+
   return (
     <div>
+      <motion.div className="progress-bar" style={{ scaleX }} />
+
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Navbar.Brand
           href="#home"
           style={{ color: "#ffffff", fontSize: "1.5rem", fontWeight: "bold" }}
         >
-          Tom Court
+          <img src={logoImage} alt="Logo" style={{ height: "40px", borderRadius: "40%", marginLeft: "10px" }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -55,14 +71,20 @@ function App() {
               smooth={true}
               offset={-navBarHeight}
               duration={500}
-              style={navLinkStyle}
-              activeStyle={{ textDecoration: "underline" }}
-              onMouseEnter={(e) =>
-                (e.target.style.transform = "translateY(-2px)")
-              }
-              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Home
+              <motion.div
+                whileHover={{ y: -2, color: "#ffcc00" }}
+                style={navLinkStyle}
+              >
+                Home
+              </motion.div>
+              <motion.div
+                style={{ ...underlineStyle, scaleX }}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                exit={{ scaleX: 0 }}
+                transition={{ type: "tween", ease: "easeOut" }}
+              />
             </Link>
             <Link
               activeClass="active"
@@ -71,14 +93,20 @@ function App() {
               smooth={true}
               offset={-navBarHeight}
               duration={500}
-              style={navLinkStyle}
-              activeStyle={{ textDecoration: "underline" }}
-              onMouseEnter={(e) =>
-                (e.target.style.transform = "translateY(-2px)")
-              }
-              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Projects
+              <motion.div
+                whileHover={{ y: -2, color: "#ffcc00" }}
+                style={navLinkStyle}
+              >
+                Projects
+              </motion.div>
+              <motion.div
+                style={{ ...underlineStyle, scaleX }}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                exit={{ scaleX: 0 }}
+                transition={{ type: "tween", ease: "easeOut" }}
+              />
             </Link>
             <Link
               activeClass="active"
@@ -87,14 +115,20 @@ function App() {
               smooth={true}
               offset={-navBarHeight}
               duration={500}
-              style={navLinkStyle}
-              activeStyle={{ textDecoration: "underline" }}
-              onMouseEnter={(e) =>
-                (e.target.style.transform = "translateY(-2px)")
-              }
-              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              About
+              <motion.div
+                whileHover={{ y: -2, color: "#ffcc00" }}
+                style={navLinkStyle}
+              >
+                About
+              </motion.div>
+              <motion.div
+                style={{ ...underlineStyle, scaleX }}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                exit={{ scaleX: 0 }}
+                transition={{ type: "tween", ease: "easeOut" }}
+              />
             </Link>
             <Link
               activeClass="active"
@@ -103,62 +137,54 @@ function App() {
               smooth={true}
               offset={-navBarHeight}
               duration={500}
-              style={navLinkStyle}
-              activeStyle={{ textDecoration: "underline" }}
-              onMouseEnter={(e) =>
-                (e.target.style.transform = "translateY(-2px)")
-              }
-              onMouseLeave={(e) => (e.target.style.transform = "translateY(0)")}
             >
-              Contact
+              <motion.div
+                whileHover={{ y: -2, color: "#ffcc00" }}
+                style={navLinkStyle}
+              >
+                Contact
+              </motion.div>
+              <motion.div
+                style={{ ...underlineStyle, scaleX }}
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                exit={{ scaleX: 0 }}
+                transition={{ type: "tween", ease: "easeOut" }}
+              />
             </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <motion.div className="progress-bar" style={{ scaleX }} />
 
-      <div style={contentStyle}>
-        <div
-          id="section1"
-          style={{
-            ...sectionStyle,
-            backgroundImage: 'url("https://i.imgur.com/09mIBEt.jpeg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundColor: "#f0f0f0",
-          }}
-        >
-          <br />
+      <div
+        style={{
+          backgroundImage: 'url("https://i.imgur.com/09mIBEt.jpeg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: navBarHeight + "px",
+        }}
+      >
+        <div id="section1" style={{ ...sectionStyle }}>
           <div className="home-content">
             <h1 className="home-h1">Tom Court: Software Engineer</h1>
-            <p className="home-p">Test text goes here</p>
+            <p className="home-p"></p>
+            <img className="picture" src="https://i.imgur.com/NF2gNgt.png"></img>
           </div>
         </div>
 
-        <div
-          id="section3"
-          style={{ ...sectionStyle, backgroundColor: "#d0d0d0" }}
-        >
+        <div id="section3" style={{ ...sectionStyle }}>
           {/* Section 3 content (Projects) */}
           <Projects />
         </div>
 
-        <div
-          id="section4"
-          style={{
-            ...sectionStyle,
-            backgroundColor: "#c0c0c0",
-            position: "relative",
-          }}
-        >
+        <div id="section4" style={{ ...sectionStyle }}>
           {/* Section 4 content (Skills) */}
           <Skills />
         </div>
 
-        <div
-          id="section5"
-          style={{ ...sectionStyle, backgroundColor: "#b0b0b0" }}
-        >
+        <div id="section5" style={{ ...sectionStyle }}>
           {/* Section 5 content */}
           <ContactForm />
         </div>

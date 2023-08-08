@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; 
+
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -25,6 +27,19 @@ const item = {
     scale: 3,
   },
 };
+
+  const buttonStyle = {
+    color: "#ffffff",
+    backgroundColor: "#007bff", // Replace this with your desired button background color
+    border: "none",
+    borderRadius: "4px",
+    padding: "8px 16px",
+    textDecoration: "none",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    cursor: "pointer",
+    marginLeft: "20px",
+  };
 
 const Projects = () => {
   const [isSectionVisible, setIsSectionVisible] = useState(false);
@@ -56,8 +71,9 @@ const Projects = () => {
 
   return (
     <div class="project-content">
-        <div class="project-h1-div">
-        <h1 className="h1-content">PROJECTS</h1></div>
+      <div class="project-h1-div">
+        <h1 className="h1-content">PROJECTS</h1>
+      </div>
       <div id="projects-section">
         {isSectionVisible && (
           <motion.ul
@@ -81,6 +97,14 @@ const Projects = () => {
                       A game of tic tac toe using simple JavaScript logic, that
                       can be played by two users on the same computer.
                     </p>
+                    <a
+                      className="button-go-tictactoe"
+                      href="https://tomtenniscourt.github.io/tic_tac_toe_200623/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Go to App
+                    </a>
                   </div>
                 )}
                 {index === 1 && (
@@ -88,8 +112,16 @@ const Projects = () => {
                     <h2 className="item-h2">Dad Jokes</h2>
                     <p className="item-p">
                       Using a 3rd party API, a random 'Dad Joke' is generated on
-                      the screen for the user
+                      the screen for the user.
                     </p>
+                    <a
+                      className="button-go-joke"
+                      href="https://tomtenniscourt.github.io/tic_tac_toe_200623/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Go to App
+                    </a>
                   </div>
                 )}
                 {index === 2 && (
@@ -100,6 +132,14 @@ const Projects = () => {
                       using real-time data to fetch weather information for any
                       given U.S. zip code
                     </p>
+                    <a
+                      className="button-go-weather"
+                      href="https://tomtenniscourt.github.io/tic_tac_toe_200623/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Go to App
+                    </a>
                   </div>
                 )}
                 {index === 3 && (
@@ -110,6 +150,14 @@ const Projects = () => {
                       blank canvas
                       <br />
                     </p>
+                    <a
+                      className="button-go-paint"
+                      href="https://tomtenniscourt.github.io/tic_tac_toe_200623/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Go to App
+                    </a>
                   </div>
                 )}
               </motion.li>
