@@ -95,7 +95,7 @@ const Projects = () => {
                     <h2 className="item-h2">Tic Tac Toe</h2>
                     <p className="item-p">
                       A game of tic tac toe using simple JavaScript logic, that
-                      can be played by two users on the same computer.
+                      can be played by two users.
                     </p>
                     <a
                       className="button-go-tictactoe"
@@ -128,8 +128,8 @@ const Projects = () => {
                   <div className="content-item-three">
                     <h2 className="item-h2">Weather App</h2>
                     <p className="item-p">
-                      Another application that uses a 3rd party API - this time
-                      using real-time data to fetch weather information for any
+                      An application that an API
+                      to fetch weather information for any
                       given U.S. zip code
                     </p>
                     <a
