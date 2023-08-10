@@ -6,7 +6,7 @@ const container = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
     opacity: 1,
-    scale: 3,
+    scale: 2.5,
     transition: {
       delayChildren: 0.3,
       staggerChildren: 0.2,
@@ -49,9 +49,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="contact-h1-div">
-        <h1 className="contact-h1-content">CONTACT</h1>
-      </div>
+
       <div className="contact-form-section">
         <motion.div
           className="contact-container"

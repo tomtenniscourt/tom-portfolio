@@ -80,3 +80,13 @@
     line-height: 1;
     /* Remove default line-height */
 }
+
+@media (max-width: 768px) {
+  .test-h1-contact {
+    padding-top: 300px;
+  }
+
+.contact-container {
+  margin-bottom: 20px;
+}
+}

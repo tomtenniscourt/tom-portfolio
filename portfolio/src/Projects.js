@@ -71,9 +71,6 @@ const Projects = () => {
 
   return (
     <div class="project-content">
-      <div class="project-h1-div">
-        <h1 className="h1-content">PROJECTS</h1>
-      </div>
       <div id="projects-section">
         {isSectionVisible && (
           <motion.ul
@@ -88,7 +85,7 @@ const Projects = () => {
                 className={`item ${expandedItem === index ? "expanded" : ""}`}
                 variants={item}
                 onClick={() => handleItemClick(index)}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.02 }}
               >
                 {index === 0 && (
                   <div className="content-item-one">

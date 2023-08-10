@@ -126,3 +126,29 @@
     transform: scale(0.9);
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 20%;
+        /* Use full width */
+        height: auto;
+        /* Height will be determined by content */
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        grid-template-rows: auto;
+        /* Auto rows */
+        gap: 3px;
+        padding: 3px;
+        border-radius: 10px;
+        margin-top: 400px;
+        margin-bottom: 200px;
+    }
+
+    .item {
+        width: 100%;
+        /* Use full width */
+        height: 50px;
+        /* Height will be determined by content */
+        border-radius: 10px;
+        margin: 1px;
+    }
+}

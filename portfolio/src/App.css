@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+
+.full-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
 .picture {
 height: 230px; 
 width:200px;
@@ -169,3 +181,31 @@ transform: translateY(-1px);
     margin-right: 10px;
   }
 }
+
+.test-h1 {
+  font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 85px;
+  }
+
+    .test-h1-skills {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      text-align: center;
+      font-size: 85px;
+    }
+
+         .test-h1-contact {
+           font-family: 'Roboto', sans-serif;
+           font-weight: 900;
+           text-align: center;
+           font-size: 85px;
+         }
+
+    @media (max-width: 768px) {
+      .section {
+        margin-bottom: 40px;
+        /* Adjust this value to control the separation */
+      }
+    }

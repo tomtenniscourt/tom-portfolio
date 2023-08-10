@@ -7,7 +7,6 @@ import "./App.css";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import ContactForm from "./ContactForm";
-import Joke from "./Joke";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -59,7 +58,11 @@ function App() {
           href="#home"
           style={{ color: "#ffffff", fontSize: "1.5rem", fontWeight: "bold" }}
         >
-          <img src={logoImage} alt="Logo" style={{ height: "40px", borderRadius: "40%", marginLeft: "10px" }} />
+          <img
+            src={logoImage}
+            alt="Logo"
+            style={{ height: "40px", borderRadius: "40%", marginLeft: "10px" }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -162,31 +165,39 @@ function App() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
-          minHeight: "100vh",
           paddingTop: navBarHeight + "px",
         }}
       >
-        <div id="section1" style={{ ...sectionStyle }}>
-          <div className="home-content">
-            <h1 className="home-h1">Tom Court: Software Engineer</h1>
-            <p className="home-p"></p>
-            <img className="picture" src="https://i.imgur.com/NF2gNgt.png"></img>
+        <div className="full-page">
+          <div id="section1" className="section">
+            <div className="home-content">
+              <h1 className="home-h1">Tom Court: Software Engineer</h1>
+              <p className="home-p"></p>
+              <img
+                className="picture"
+                src="https://i.imgur.com/NF2gNgt.png"
+              ></img>
+            </div>
           </div>
-        </div>
 
-        <div id="section3" style={{ ...sectionStyle }}>
-          {/* Section 3 content (Projects) */}
-          <Projects />
-        </div>
+          <div id="section3" className="section">
+            {/* Section 3 content (Projects) */}
+            <h1 class="test-h1">PROJECTS</h1>
+            <Projects />
+          </div>
 
-        <div id="section4" style={{ ...sectionStyle }}>
-          {/* Section 4 content (Skills) */}
-          <Skills />
-        </div>
+          <div id="section4" className="section">
+            {/* Section 4 content (Skills) */}
+            <h1 class="test-h1-skills">ABOUT ME</h1>
 
-        <div id="section5" style={{ ...sectionStyle }}>
-          {/* Section 5 content */}
-          <ContactForm />
+            <Skills />
+          </div>
+
+          <div id="section5" className="section">
+            {/* Section 5 content */}
+            <h1 class="test-h1-contact">CONTACT</h1>
+            <ContactForm />
+          </div>
         </div>
       </div>
     </div>

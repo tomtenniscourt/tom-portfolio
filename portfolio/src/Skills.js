@@ -63,9 +63,7 @@ const Skills = () => {
 
   return (
     <div className="skills-wrapper">
-      <div className="skill-h1-div">
-        <h1 className="h1-skills-content">ABOUT ME</h1>
-      </div>
+
       <div className="skill-content">
         <div id="skills-section">
           {isSectionVisible && (
@@ -78,7 +76,7 @@ const Skills = () => {
               <motion.li
                 className={`skill-item`}
                 variants={item}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="skill-content-item">
                   <h2 className="item-h2">My Skills</h2>
@@ -86,6 +84,7 @@ const Skills = () => {
                     {skills.map((skill, index) => (
                       <div className="skill-box-new" key={index}>
                         {skill}
+                        <br />
                       </div>
                     ))}
                   </div>
@@ -94,7 +93,7 @@ const Skills = () => {
               <motion.li
                 className={`skill-item`}
                 variants={item}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="skill-content-item">
                   <h2 className="item-h2">Who Am I?</h2>
