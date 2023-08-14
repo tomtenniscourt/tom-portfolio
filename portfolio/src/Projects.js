@@ -30,7 +30,7 @@ const item = {
 
   const buttonStyle = {
     color: "#ffffff",
-    backgroundColor: "#007bff", // Replace this with your desired button background color
+    backgroundColor: "#007bff", 
     border: "none",
     borderRadius: "4px",
     padding: "8px 16px",
@@ -113,7 +113,7 @@ const Projects = () => {
                     </p>
                     <a
                       className="button-go-joke"
-                      href="https://tomtenniscourt.github.io/tic_tac_toe_200623/"
+                      href="https://dad-joke-generator-phi.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -125,9 +125,8 @@ const Projects = () => {
                   <div className="content-item-three">
                     <h2 className="item-h2">Weather App</h2>
                     <p className="item-p">
-                      An application that an API
-                      to fetch weather information for any
-                      given U.S. zip code
+                      An application that an API to fetch weather information
+                      for any given U.S. zip code
                     </p>
                     <a
                       className="button-go-weather"
