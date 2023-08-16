@@ -130,7 +130,7 @@ const Projects = () => {
                     </p>
                     <a
                       className="button-go-weather"
-                      href="https://tomtenniscourt.github.io/tic_tac_toe_200623/"
+                      href="https://my-project-2-47ihbr2ba-tomtenniscourt.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
